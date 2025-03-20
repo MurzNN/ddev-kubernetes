@@ -1,4 +1,4 @@
-[![tests](https://github.com/ddev/ddev-ddev-kubernetes/actions/workflows/tests.yml/badge.svg)](https://github.com/MurzNN/ddev-kubernetes/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2025.svg)
+[![tests](https://github.com/MurzNN/ddev-kubernetes/actions/workflows/tests.yml/badge.svg)](https://github.com/MurzNN/ddev-kubernetes/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2025.svg)
 
 # DDEV Kubernetes add-on <!-- omit in toc -->
 
