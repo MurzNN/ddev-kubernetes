@@ -23,4 +23,4 @@ Then, restart your project
 ddev restart
 ```
 
-**Contributed and maintained by @MurzNN**
+**Contributed and maintained by  [@MurzNN](https://github.com/MurzNN) (Alexey Murz Korepov).**
