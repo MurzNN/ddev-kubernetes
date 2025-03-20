@@ -42,6 +42,18 @@ health_checks() {
   run kubectl version --client=true
   assert_success
   assert_output --partial "Client Version:"
+  
+  run k version --client=true
+  assert_success
+  assert_output --partial "Client Version:"
+  
+  run k ns -h
+  assert_success
+  assert_output --partial "list the namespaces in the current context"
+
+  run k ctx -h
+  assert_success
+  assert_output --partial "list the contexts"
 }
 
 teardown() {
