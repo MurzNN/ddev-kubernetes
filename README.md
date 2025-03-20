@@ -4,6 +4,9 @@
 
 This is an add-on for the [DDEV](https://ddev.readthedocs.io) project that adds utilities to work with Kubernetes inside the DDEV Web container.
 
+After adding, these commands will be available inside the `web` container:
+- `kubectl` (and a shortcut just `k`).
+
 ## Installation
 
 Run a command:
@@ -18,4 +21,4 @@ Then, restart your project
 ddev restart
 ```
 
-**Contributed and maintained by `@MurzNN`**
+**Contributed and maintained by @MurzNN**
