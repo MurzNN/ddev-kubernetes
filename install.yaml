@@ -4,5 +4,6 @@ name: ddev-kubernetes
 
 project_files:
   - web-build/Dockerfile.kubectl
+  - web-build/Dockerfile.kubectl-plugins
 
 ddev_version_constraint: '>= v1.24.2'
