@@ -12,7 +12,7 @@ After adding, these commands will be available inside the `web` container:
 Run a command:
 
 ```sh
-ddev add-on get ddev-kubernetes
+ddev add-on get MurzNN/ddev-kubernetes
 ```
 
 Then, restart your project
