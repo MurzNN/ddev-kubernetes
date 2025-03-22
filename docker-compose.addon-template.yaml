@@ -1,5 +1,3 @@
-#ddev-generated
-# Simple template to demonstrate ddev-kubernetes
 services:
   ddev-kubernetes:
     container_name: ddev-${DDEV_SITENAME}-ddev-kubernetes

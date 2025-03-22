@@ -39,19 +39,25 @@ setup() {
 }
 
 health_checks() {
-  run kubectl version --client=true
+  run ddev exec kubectl version --client=true
   assert_success
   assert_output --partial "Client Version:"
-  
-  run k version --client=true
+
+  run ddev exec ls -la /usr/local/bin
+
+  run ddev exec k version --client=true
   assert_success
   assert_output --partial "Client Version:"
-  
-  run k ns -h
+
+  run ddev exec k krew version
+  assert_success
+  assert_output --partial "https://github.com/kubernetes-sigs/krew-index.git"
+
+  run ddev exec k ns -h
   assert_success
   assert_output --partial "list the namespaces in the current context"
 
-  run k ctx -h
+  run ddev exec  k ctx -h
   assert_success
   assert_output --partial "list the contexts"
 }
