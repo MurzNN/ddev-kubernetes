@@ -10,6 +10,8 @@ RUN ( \
   )
 ENV HOME=/home/$username
 
+RUN echo "HOME $HOME"
+
 # Install krew plugin by instruction from https://krew.sigs.k8s.io/docs/user-guide/setup/install/#bash.
 RUN ( \
   set -x; cd "$(mktemp -d)" \
