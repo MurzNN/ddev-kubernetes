@@ -8,6 +8,7 @@ RUN ( \
   && chmod +x ~/bin/kubectl \
   && ln -s ./kubectl ~/bin/k \
   )
+ARG username
 ENV HOME=/home/$username
 
 RUN echo "HOME $HOME"
