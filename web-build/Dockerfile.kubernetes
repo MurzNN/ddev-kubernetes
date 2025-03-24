@@ -1,5 +1,5 @@
 # Temporary switch to the ddev user to install utils in the userspace.
-USER 1000
+USER $uid
 
 # Install kubectl utility by instructions from https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-kubectl-binary-with-curl-on-linux.
 RUN ( \
@@ -8,10 +8,6 @@ RUN ( \
   && chmod +x ~/bin/kubectl \
   && ln -s ./kubectl ~/bin/k \
   )
-ARG username
-ENV HOME=/home/$username
-
-RUN echo "HOME $HOME"
 
 # Install krew plugin by instruction from https://krew.sigs.k8s.io/docs/user-guide/setup/install/#bash.
 RUN ( \
@@ -21,7 +17,7 @@ RUN ( \
   && KREW="krew-${OS}_${ARCH}" \
   && curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/${KREW}.tar.gz" \
   && tar zxvf "${KREW}.tar.gz" \
-  && HOME=/home/$username ./"${KREW}" install krew \
+  && ./"${KREW}" install krew \
   )
 
 # Install kubectx + kubens from https://github.com/ahmetb/kubectx.
