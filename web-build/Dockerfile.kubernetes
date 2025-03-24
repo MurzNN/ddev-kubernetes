@@ -8,6 +8,7 @@ RUN ( \
   && chmod +x ~/bin/kubectl \
   && ln -s ./kubectl ~/bin/k \
   )
+ENV HOME=/home/$username
 
 # Install krew plugin by instruction from https://krew.sigs.k8s.io/docs/user-guide/setup/install/#bash.
 RUN ( \
@@ -17,11 +18,8 @@ RUN ( \
   && KREW="krew-${OS}_${ARCH}" \
   && curl -fsSLO "https://github.com/kubernetes-sigs/krew/releases/latest/download/${KREW}.tar.gz" \
   && tar zxvf "${KREW}.tar.gz" \
-  && echo "home $HOME" \
-  && export HOME=/home/$username \
   && ./"${KREW}" install krew \
   )
-#ENV KREW_ROOT="/usr/lib/krew"
 
 # Install kubectx + kubens from https://github.com/ahmetb/kubectx.
 RUN export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH" \
