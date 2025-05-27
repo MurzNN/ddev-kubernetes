@@ -1,3 +1,4 @@
+#ddev-generated
 # Temporary switch to the ddev user to install utils in the userspace.
 USER $uid
 

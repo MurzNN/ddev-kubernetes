@@ -57,9 +57,13 @@ health_checks() {
   assert_success
   assert_output --partial "list the namespaces in the current context"
 
+  run ddev exec  k ctx -h
+  assert_success
+  assert_output --partial "list the contexts"
+
   run ddev exec helm version
   assert_success
-  assert_output --partial "Version:\"v3"
+  assert_output --partial "Version:\"v3."
 }
 
 teardown() {

@@ -6,6 +6,7 @@ This is an add-on for the [DDEV](https://ddev.readthedocs.io) project that adds 
 
 After adding, these commands will be available inside the `web` container:
 - `kubectl` (and a shortcut as just `k`).
+- `helm`.
 - `k krew` - [details »](https://krew.sigs.k8s.io/)
 - `k ns` and `k ctx` - [details »](https://github.com/ahmetb/kubectx)
 
@@ -23,4 +24,4 @@ Then, restart your project
 ddev restart
 ```
 
-**Contributed and maintained by  [@MurzNN](https://github.com/MurzNN) (Alexey Murz Korepov).**
+**Contributed and maintained by [@MurzNN](https://github.com/MurzNN) (Alexey Murz Korepov).**
