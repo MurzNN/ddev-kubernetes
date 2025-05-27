@@ -26,3 +26,6 @@ RUN export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH" \
 
 # Revert back to root to not affect other commands.
 USER root
+
+# Install Helm utility by instructions from https://helm.sh/docs/intro/install/
+RUN curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
