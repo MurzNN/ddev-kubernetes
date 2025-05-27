@@ -60,6 +60,10 @@ health_checks() {
   run ddev exec  k ctx -h
   assert_success
   assert_output --partial "list the contexts"
+
+  run ddev exec helm version
+  assert_success
+  assert_output --partial "Version:\"v3."
 }
 
 teardown() {
